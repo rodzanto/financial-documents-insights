@@ -38,8 +38,7 @@ With Amazon Rekognition, we can also verify the risk scores based on the image s
 For this demo, we labeled 38 documents through the interactive UI of Amazon Rekognition Custom Labels, and kept 12 images for testing. In the demo we explore different documents, some of them having missing risk values in the text, or even having a different value in the text, for checking if the image' score prevails as expected.
 
 
-
-
+https://github.com/rodzanto/financial-documents-insights/assets/42835728/767e4fa1-cd35-4f0c-936f-c9ce4b13e61a
 
 
 #### Architecture Diagram
