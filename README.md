@@ -55,10 +55,10 @@ For this example, we're using AWS Step Functions for orchestrating the logic eac
 
 <img src="./media/stepfunctions_graph.png" alt="drawing" width="500"/>
 
-**Single document indexing and upsert into embeddings**
+**Documents retrieval in RAG flow**
 
 <img src="./media/flow1.png" alt="drawing" width="700"/>
 
-**Documents retrieval in RAG & aggregation flows**
+**Aggregation questions flow**
 
 <img src="./media/flow3.png" alt="drawing" width="700"/>
