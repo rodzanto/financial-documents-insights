@@ -7,19 +7,10 @@ In this sample, we show a solution for having an interactive and multi-lingual c
 #### Interaction for questions on a specific ID
 
 
-<video width="500" controls>
-  <source src="./media/allfunds-demo-1.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
 
 
 #### Interaction for aggregation questions across all IDs
 
-
-<video width="500" controls>
-  <source src="./media/allfunds-demo-2.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
 
 
 #### Risk score classification from documents' images
