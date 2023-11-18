@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Allfunds AI Assistant by AWS</title>
+<!--meta name="viewport" content="width=device-width,initial-scale=1"-->
+<link rel="stylesheet" href="">
+<style>
+    body {
+        background-color: #24375C;
+    }
+</style>
+<body style="margin: 0 0 0 0">
+    <img src="https://www.pactomundial.org/wp-content/uploads/2022/06/AF-Logo-VPositivo_Allfunds_RGB-scaled-2.jpg" width="100" style="vertical-align:middle;margin:50px 10px">
+    <flowise-fullchatbot></flowise-fullchatbot>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.initFull({
+            chatflowid: "e0d44f15-7bc3-4d1f-b687-94d8105af0ef",
+            apiHost: "http://ec2-44-200-109-243.compute-1.amazonaws.com:3000",
+            theme: {
+                button: {
+                    backgroundColor: "#24375C",
+                    right: 0,
+                    bottom: 0,
+                    size: "small",
+                    iconColor: "white",
+                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                },
+                chatWindow: {
+                    welcomeMessage: "Welcome to **Allfunds AI Assistant**",
+                    backgroundColor: "#24375C",
+                    height: 530,
+                    width: 800,
+                    fontSize: 16,
+                    poweredByTextColor: "#303235",
+                    botMessage: {
+                        backgroundColor: "#f7f8ff",
+                        textColor: "#303235",
+                        showAvatar: true,
+                        avatarSrc: "https://pbs.twimg.com/profile_images/1641476962362302464/K8lb6OtN_400x400.jpg", //https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+                    },
+                    userMessage: {
+                        backgroundColor: "#3B81F6",
+                        textColor: "#ffffff",
+                        showAvatar: true,
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                    },
+                    textInput: {
+                        placeholder: "Type your question",
+                        backgroundColor: "#ffffff",
+                        textColor: "#303235",
+                        sendButtonColor: "#3B81F6",
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
