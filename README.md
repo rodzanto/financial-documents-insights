@@ -29,7 +29,7 @@ We implement a Retrieval Augmented Generation (RAG) flow from the indexed docume
 
 #### Architecture Diagram
 
-<img src="./media/architecture.png" alt="drawing" width="500"/>
+<img src="./media/architecture.png" alt="drawing" width="600"/>
 
 #### Sample Flows
 
@@ -37,12 +37,12 @@ For this example, we're using AWS Step Functions for orchestrating the logic eac
 
 **New document processing flow**
 
-<img src="./media/stepfunctions_graph.png" alt="drawing" width="400"/>
+<img src="./media/stepfunctions_graph.png" alt="drawing" width="500"/>
 
 **Single document indexing and upsert into embeddings**
 
-<img src="./media/flow1.png" alt="drawing" width="600"/>
+<img src="./media/flow1.png" alt="drawing" width="700"/>
 
 **Documents retrieval in RAG & aggregation flows**
 
-<img src="./media/flow3.png" alt="drawing" width="600"/>
+<img src="./media/flow3.png" alt="drawing" width="700"/>
