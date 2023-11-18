@@ -17,7 +17,8 @@ Based on the company documents, with Amazon Bedrock we can ask any questions abo
 
 In this demo we show the option of having an AI Assistant as a pop-up chat in any webpage.
 
-https://github.com/rodzanto/financial-documents-insights/assets/42835728/6dc9809f-a3e6-4165-8a3a-71f8a9261f1b
+
+https://github.com/rodzanto/financial-documents-insights/assets/42835728/2acf89c3-a577-4e6d-8d16-bab09fd2be4b
 
 
 #### Interaction for aggregation questions across all IDs
@@ -26,7 +27,9 @@ By defining prompt flows for Amazon Bedrock, it is also possible to ask question
 
 In this demo we show the option of having a full page for the AI Assistant interaction.
 
-https://github.com/rodzanto/financial-documents-insights/assets/42835728/752a90cc-2b0b-4f75-b486-ce220408c942
+
+https://github.com/rodzanto/financial-documents-insights/assets/42835728/2df1ff12-c5b8-4266-b778-23c98b8ecc0f
+
 
 
 #### Risk score classification from documents' images
@@ -38,7 +41,8 @@ With Amazon Rekognition, we can also verify the risk scores based on the image s
 For this demo, we labeled 38 documents through the interactive UI of Amazon Rekognition Custom Labels, and kept 12 images for testing. In the demo we explore different documents, some of them having missing risk values in the text, or even having a different value in the text, for checking if the image' score prevails as expected.
 
 
-https://github.com/rodzanto/financial-documents-insights/assets/42835728/767e4fa1-cd35-4f0c-936f-c9ce4b13e61a
+https://github.com/rodzanto/financial-documents-insights/assets/42835728/1b6e7e1e-c16f-4691-93f3-e9fa9fd76716
+
 
 
 #### Architecture Diagram
