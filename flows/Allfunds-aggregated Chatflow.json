@@ -1,0 +1,544 @@
+{
+  "nodes": [
+    {
+      "width": 300,
+      "height": 487,
+      "id": "plainText_0",
+      "position": {
+        "x": -154.93988177127503,
+        "y": 226.67273563388954
+      },
+      "type": "customNode",
+      "data": {
+        "id": "plainText_0",
+        "label": "Plain Text",
+        "version": 2,
+        "name": "plainText",
+        "type": "Document",
+        "baseClasses": [
+          "Document"
+        ],
+        "category": "Document Loaders",
+        "description": "Load data from plain text",
+        "inputParams": [
+          {
+            "label": "Text",
+            "name": "text",
+            "type": "string",
+            "rows": 4,
+            "placeholder": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+            "id": "plainText_0-input-text-string"
+          },
+          {
+            "label": "Metadata",
+            "name": "metadata",
+            "type": "json",
+            "optional": true,
+            "additionalParams": true,
+            "id": "plainText_0-input-metadata-json"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Text Splitter",
+            "name": "textSplitter",
+            "type": "TextSplitter",
+            "optional": true,
+            "id": "plainText_0-input-textSplitter-TextSplitter"
+          }
+        ],
+        "inputs": {
+          "text": "1. ISIN LU0776413279, date 21/02/2023, risk 2 out of 7, OGC 1.48%\n2. ISIN LU1195516338, date 21/02/2023, risk 3 out of 7, OGC 1.54%\n3. ISIN LU1914599110, date 01/01/2023, risk 4 out of 7, OGC 1,85%\n4. ISIN LU2337050632, date 25/05/2023, risk 2 out of 7, OGC 0.73%\n5. ISIN LU2310407734, date 15/06/2023, risk 5 out of 7, OGC 0.83%\n6. ISIN IE00B9F5YL18, date 27/06/2023, risk 4 out of 7, OGC 0.19%\n7. ISIN IE00BQQPST56, date 28/06/2023, risk 3 out of 7, OGC 2.51%\n8. ISIN IE000REKO956, date 30/06/2023, risk 4 out of 7, OGC 0.9%\n9. ISIN LU0390858792, date 03/07/2023, risk 3 out of 7, OGC 0.81%\n10. ISIN BE6328639685, date 02/06/2023, risk 5 out of 7, OGC 1.1%",
+          "textSplitter": "",
+          "metadata": "{}"
+        },
+        "outputAnchors": [
+          {
+            "name": "output",
+            "label": "Output",
+            "type": "options",
+            "options": [
+              {
+                "id": "plainText_0-output-document-Document",
+                "name": "document",
+                "label": "Document",
+                "type": "Document"
+              },
+              {
+                "id": "plainText_0-output-text-string|json",
+                "name": "text",
+                "label": "Text",
+                "type": "string | json"
+              }
+            ],
+            "default": "document"
+          }
+        ],
+        "outputs": {
+          "output": "text"
+        },
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -154.93988177127503,
+        "y": 226.67273563388954
+      },
+      "dragging": false
+    },
+    {
+      "width": 300,
+      "height": 653,
+      "id": "chatPromptTemplate_0",
+      "position": {
+        "x": 242.60840703564003,
+        "y": 232.11258621228478
+      },
+      "type": "customNode",
+      "data": {
+        "id": "chatPromptTemplate_0",
+        "label": "Chat Prompt Template",
+        "version": 1,
+        "name": "chatPromptTemplate",
+        "type": "ChatPromptTemplate",
+        "baseClasses": [
+          "ChatPromptTemplate",
+          "BaseChatPromptTemplate",
+          "BasePromptTemplate",
+          "Runnable"
+        ],
+        "category": "Prompts",
+        "description": "Schema to represent a chat prompt",
+        "inputParams": [
+          {
+            "label": "System Message",
+            "name": "systemMessagePrompt",
+            "type": "string",
+            "rows": 4,
+            "placeholder": "You are a helpful assistant that translates {input_language} to {output_language}.",
+            "id": "chatPromptTemplate_0-input-systemMessagePrompt-string"
+          },
+          {
+            "label": "Human Message",
+            "name": "humanMessagePrompt",
+            "type": "string",
+            "rows": 4,
+            "placeholder": "{text}",
+            "id": "chatPromptTemplate_0-input-humanMessagePrompt-string"
+          },
+          {
+            "label": "Format Prompt Values",
+            "name": "promptValues",
+            "type": "json",
+            "optional": true,
+            "acceptVariable": true,
+            "list": true,
+            "id": "chatPromptTemplate_0-input-promptValues-json"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "systemMessagePrompt": "You're an assistant for the company Allfunds. Consider the context for answering the user's question briefly and with direct responses. Answer in the same language of the user's question.\n\nContext: {context}",
+          "humanMessagePrompt": "{text}",
+          "promptValues": "{\"context\":\"{{plainText_0.data.instance}}\",\"text\":\"{{question}}\"}"
+        },
+        "outputAnchors": [
+          {
+            "id": "chatPromptTemplate_0-output-chatPromptTemplate-ChatPromptTemplate|BaseChatPromptTemplate|BasePromptTemplate|Runnable",
+            "name": "chatPromptTemplate",
+            "label": "ChatPromptTemplate",
+            "type": "ChatPromptTemplate | BaseChatPromptTemplate | BasePromptTemplate | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 242.60840703564003,
+        "y": 232.11258621228478
+      },
+      "dragging": false
+    },
+    {
+      "width": 300,
+      "height": 407,
+      "id": "llmChain_0",
+      "position": {
+        "x": 1048.8182474817,
+        "y": 458.974914707402
+      },
+      "type": "customNode",
+      "data": {
+        "id": "llmChain_0",
+        "label": "LLM Chain",
+        "version": 1,
+        "name": "llmChain",
+        "type": "LLMChain",
+        "baseClasses": [
+          "LLMChain",
+          "BaseChain",
+          "Runnable"
+        ],
+        "category": "Chains",
+        "description": "Chain to run queries against LLMs",
+        "inputParams": [
+          {
+            "label": "Chain Name",
+            "name": "chainName",
+            "type": "string",
+            "placeholder": "Name Your Chain",
+            "optional": true,
+            "id": "llmChain_0-input-chainName-string"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Language Model",
+            "name": "model",
+            "type": "BaseLanguageModel",
+            "id": "llmChain_0-input-model-BaseLanguageModel"
+          },
+          {
+            "label": "Prompt",
+            "name": "prompt",
+            "type": "BasePromptTemplate",
+            "id": "llmChain_0-input-prompt-BasePromptTemplate"
+          }
+        ],
+        "inputs": {
+          "model": "{{awsChatBedrock_0.data.instance}}",
+          "prompt": "{{chatPromptTemplate_0.data.instance}}",
+          "chainName": "demo"
+        },
+        "outputAnchors": [
+          {
+            "name": "output",
+            "label": "Output",
+            "type": "options",
+            "options": [
+              {
+                "id": "llmChain_0-output-llmChain-LLMChain|BaseChain|Runnable",
+                "name": "llmChain",
+                "label": "LLM Chain",
+                "type": "LLMChain | BaseChain | Runnable"
+              },
+              {
+                "id": "llmChain_0-output-outputPrediction-string|json",
+                "name": "outputPrediction",
+                "label": "Output Prediction",
+                "type": "string | json"
+              }
+            ],
+            "default": "llmChain"
+          }
+        ],
+        "outputs": {
+          "output": "llmChain"
+        },
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1048.8182474817,
+        "y": 458.974914707402
+      },
+      "dragging": false
+    },
+    {
+      "width": 300,
+      "height": 718,
+      "id": "awsChatBedrock_0",
+      "position": {
+        "x": 598.5870261923033,
+        "y": -85.64178959788353
+      },
+      "type": "customNode",
+      "data": {
+        "id": "awsChatBedrock_0",
+        "label": "AWS Bedrock",
+        "version": 2,
+        "name": "awsChatBedrock",
+        "type": "AWSChatBedrock",
+        "baseClasses": [
+          "AWSChatBedrock",
+          "SimpleChatModel",
+          "BaseChatModel",
+          "BaseLanguageModel",
+          "Runnable"
+        ],
+        "category": "Chat Models",
+        "description": "Wrapper around AWS Bedrock large language models that use the Chat endpoint",
+        "inputParams": [
+          {
+            "label": "AWS Credential",
+            "name": "credential",
+            "type": "credential",
+            "credentialNames": [
+              "awsApi"
+            ],
+            "optional": true,
+            "id": "awsChatBedrock_0-input-credential-credential"
+          },
+          {
+            "label": "Region",
+            "name": "region",
+            "type": "options",
+            "options": [
+              {
+                "label": "af-south-1",
+                "name": "af-south-1"
+              },
+              {
+                "label": "ap-east-1",
+                "name": "ap-east-1"
+              },
+              {
+                "label": "ap-northeast-1",
+                "name": "ap-northeast-1"
+              },
+              {
+                "label": "ap-northeast-2",
+                "name": "ap-northeast-2"
+              },
+              {
+                "label": "ap-northeast-3",
+                "name": "ap-northeast-3"
+              },
+              {
+                "label": "ap-south-1",
+                "name": "ap-south-1"
+              },
+              {
+                "label": "ap-south-2",
+                "name": "ap-south-2"
+              },
+              {
+                "label": "ap-southeast-1",
+                "name": "ap-southeast-1"
+              },
+              {
+                "label": "ap-southeast-2",
+                "name": "ap-southeast-2"
+              },
+              {
+                "label": "ap-southeast-3",
+                "name": "ap-southeast-3"
+              },
+              {
+                "label": "ap-southeast-4",
+                "name": "ap-southeast-4"
+              },
+              {
+                "label": "ap-southeast-5",
+                "name": "ap-southeast-5"
+              },
+              {
+                "label": "ap-southeast-6",
+                "name": "ap-southeast-6"
+              },
+              {
+                "label": "ca-central-1",
+                "name": "ca-central-1"
+              },
+              {
+                "label": "ca-west-1",
+                "name": "ca-west-1"
+              },
+              {
+                "label": "cn-north-1",
+                "name": "cn-north-1"
+              },
+              {
+                "label": "cn-northwest-1",
+                "name": "cn-northwest-1"
+              },
+              {
+                "label": "eu-central-1",
+                "name": "eu-central-1"
+              },
+              {
+                "label": "eu-central-2",
+                "name": "eu-central-2"
+              },
+              {
+                "label": "eu-north-1",
+                "name": "eu-north-1"
+              },
+              {
+                "label": "eu-south-1",
+                "name": "eu-south-1"
+              },
+              {
+                "label": "eu-south-2",
+                "name": "eu-south-2"
+              },
+              {
+                "label": "eu-west-1",
+                "name": "eu-west-1"
+              },
+              {
+                "label": "eu-west-2",
+                "name": "eu-west-2"
+              },
+              {
+                "label": "eu-west-3",
+                "name": "eu-west-3"
+              },
+              {
+                "label": "il-central-1",
+                "name": "il-central-1"
+              },
+              {
+                "label": "me-central-1",
+                "name": "me-central-1"
+              },
+              {
+                "label": "me-south-1",
+                "name": "me-south-1"
+              },
+              {
+                "label": "sa-east-1",
+                "name": "sa-east-1"
+              },
+              {
+                "label": "us-east-1",
+                "name": "us-east-1"
+              },
+              {
+                "label": "us-east-2",
+                "name": "us-east-2"
+              },
+              {
+                "label": "us-gov-east-1",
+                "name": "us-gov-east-1"
+              },
+              {
+                "label": "us-gov-west-1",
+                "name": "us-gov-west-1"
+              },
+              {
+                "label": "us-west-1",
+                "name": "us-west-1"
+              },
+              {
+                "label": "us-west-2",
+                "name": "us-west-2"
+              }
+            ],
+            "default": "us-east-1",
+            "id": "awsChatBedrock_0-input-region-options"
+          },
+          {
+            "label": "Model Name",
+            "name": "model",
+            "type": "options",
+            "options": [
+              {
+                "label": "anthropic.claude-instant-v1",
+                "name": "anthropic.claude-instant-v1"
+              },
+              {
+                "label": "anthropic.claude-v1",
+                "name": "anthropic.claude-v1"
+              },
+              {
+                "label": "anthropic.claude-v2",
+                "name": "anthropic.claude-v2"
+              }
+            ],
+            "default": "anthropic.claude-v2",
+            "id": "awsChatBedrock_0-input-model-options"
+          },
+          {
+            "label": "Temperature",
+            "name": "temperature",
+            "type": "number",
+            "step": 0.1,
+            "description": "Temperature parameter may not apply to certain model. Please check available model parameters",
+            "optional": true,
+            "default": 0.7,
+            "id": "awsChatBedrock_0-input-temperature-number"
+          },
+          {
+            "label": "Max Tokens to Sample",
+            "name": "max_tokens_to_sample",
+            "type": "number",
+            "step": 10,
+            "description": "Max Tokens parameter may not apply to certain model. Please check available model parameters",
+            "optional": true,
+            "default": 200,
+            "id": "awsChatBedrock_0-input-max_tokens_to_sample-number"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Cache",
+            "name": "cache",
+            "type": "BaseCache",
+            "optional": true,
+            "id": "awsChatBedrock_0-input-cache-BaseCache"
+          }
+        ],
+        "inputs": {
+          "cache": "",
+          "region": "us-east-1",
+          "model": "anthropic.claude-v2",
+          "temperature": "0",
+          "max_tokens_to_sample": "8000"
+        },
+        "outputAnchors": [
+          {
+            "id": "awsChatBedrock_0-output-awsChatBedrock-AWSChatBedrock|SimpleChatModel|BaseChatModel|BaseLanguageModel|Runnable",
+            "name": "awsChatBedrock",
+            "label": "AWSChatBedrock",
+            "type": "AWSChatBedrock | SimpleChatModel | BaseChatModel | BaseLanguageModel | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 598.5870261923033,
+        "y": -85.64178959788353
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "plainText_0",
+      "sourceHandle": "plainText_0-output-text-string|json",
+      "target": "chatPromptTemplate_0",
+      "targetHandle": "chatPromptTemplate_0-input-promptValues-json",
+      "type": "buttonedge",
+      "id": "plainText_0-plainText_0-output-text-string|json-chatPromptTemplate_0-chatPromptTemplate_0-input-promptValues-json",
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "source": "chatPromptTemplate_0",
+      "sourceHandle": "chatPromptTemplate_0-output-chatPromptTemplate-ChatPromptTemplate|BaseChatPromptTemplate|BasePromptTemplate|Runnable",
+      "target": "llmChain_0",
+      "targetHandle": "llmChain_0-input-prompt-BasePromptTemplate",
+      "type": "buttonedge",
+      "id": "chatPromptTemplate_0-chatPromptTemplate_0-output-chatPromptTemplate-ChatPromptTemplate|BaseChatPromptTemplate|BasePromptTemplate|Runnable-llmChain_0-llmChain_0-input-prompt-BasePromptTemplate",
+      "data": {
+        "label": ""
+      }
+    },
+    {
+      "source": "awsChatBedrock_0",
+      "sourceHandle": "awsChatBedrock_0-output-awsChatBedrock-AWSChatBedrock|SimpleChatModel|BaseChatModel|BaseLanguageModel|Runnable",
+      "target": "llmChain_0",
+      "targetHandle": "llmChain_0-input-model-BaseLanguageModel",
+      "type": "buttonedge",
+      "id": "awsChatBedrock_0-awsChatBedrock_0-output-awsChatBedrock-AWSChatBedrock|SimpleChatModel|BaseChatModel|BaseLanguageModel|Runnable-llmChain_0-llmChain_0-input-model-BaseLanguageModel",
+      "data": {
+        "label": ""
+      }
+    }
+  ]
+}
