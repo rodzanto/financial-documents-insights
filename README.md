@@ -7,11 +7,13 @@ In this sample, we show a solution for having an interactive and multi-lingual c
 #### Interaction for questions on a specific ID
 
 
+https://github.com/rodzanto/financial-documents-insights/assets/42835728/6dc9809f-a3e6-4165-8a3a-71f8a9261f1b
 
 
 #### Interaction for aggregation questions across all IDs
 
 
+https://github.com/rodzanto/financial-documents-insights/assets/42835728/752a90cc-2b0b-4f75-b486-ce220408c942
 
 
 #### Risk score classification from documents' images
