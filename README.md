@@ -13,6 +13,7 @@ In this sample, we show a solution for having an interactive and multi-lingual c
 
 
 
+
 #### Risk score classification from documents' images
 
 
